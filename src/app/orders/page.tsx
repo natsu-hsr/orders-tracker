@@ -1,20 +1,26 @@
 "use client";
 
-import CustomTableContainer from "@/components/custom-table/custom-table-container";
-import { ordersMockColumns } from "@/mocks/orders/columns";
-import { ordersFilters } from "@/mocks/orders/filters";
-import { selectOrdersData, TOrder } from "@/store/slices/orders";
-import { useAppSelector } from "@/store/config/hooks";
+import Title from "antd/es/typography/Title";
+
+import {CustomTableContainer} from "@/components/custom-table";
+import {ordersMockColumns} from "@/mocks/orders/columns";
+import {ordersFilters} from "@/mocks/orders/filters";
+import {selectOrdersData, TOrder} from "@/store/slices/orders";
+import {useAppSelector} from "@/store/config/hooks";
 
 
 export default function Orders() {
   const ordersData = useAppSelector(selectOrdersData);
 
   return (
-    <CustomTableContainer<TOrder>
-      filters={ordersFilters}
-      columns={ordersMockColumns}
-      dataSource={ordersData}
-    />
+    <>
+      <Title level={2}>Таблица заказов</Title>
+      <CustomTableContainer<TOrder>
+        filters={ordersFilters}
+        rowKey="orderId"
+        columns={ordersMockColumns}
+        dataSource={ordersData}
+      />
+    </>
   );
 }

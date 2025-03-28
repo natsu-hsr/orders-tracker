@@ -1,9 +1,10 @@
-import s from './page.module.css';
-import { Col, Row } from 'antd'
+import {Col, Row} from 'antd'
 import Title from "antd/es/typography/Title"
 import Link from 'next/link'
 
-import { SearchOrderField } from "@/components/custom-fields/fields/search-order-field/search-order-field";
+import {SearchOrderField} from "@/components/custom-fields/fields/search-order-field/search-order-field";
+
+import s from './page.module.scss';
 
 
 export default function Home() {

@@ -1,21 +1,22 @@
 "use client";
 
-import { Button, Drawer, Empty, Row } from "antd";
+import {Button, Drawer, Empty, Row} from "antd";
 import Form from "antd/es/form/Form";
 import FormItem from "antd/es/form/FormItem";
-import { useForm } from "antd/es/form/Form";
-import { resolveFilterItemsByType } from "./filters-form-resolver";
-import { useAppDispatch, useAppSelector } from "../../store/config/hooks";
-import { ordersSliceActions, selectOrdersAppliedFilters } from "../../store/slices/orders";
-import { TFilters } from "./filters-form.types";
-import { TOrderFilters } from "../../store/slices/orders/orders-slice-types";
+import {useForm} from "antd/es/form/Form";
+import {useState} from "react";
 import isEmpty from "lodash/isEmpty";
-import { useEffect, useState } from "react";
+
+import {useAppDispatch, useAppSelector} from "@/store/config/hooks";
+import {ordersSliceActions, selectOrdersAppliedFilters} from "@/store/slices/orders";
+import {TOrderFilters} from "@/store/slices/orders/orders-slice-types";
+import {TFilters} from "./filters-form.types";
+import {resolveFilterItemsByType} from "./filters-form-resolver";
 
 import s from "./filters-form.module.scss";
 
 export type FiltersFormProps = {
-  filters: TFilters;
+  filters: Readonly<TFilters>;
 };
 
 export const FiltersForm = ({filters}: FiltersFormProps) => {
@@ -32,10 +33,6 @@ export const FiltersForm = ({filters}: FiltersFormProps) => {
   const handleClose = () => {
     setOpen(false);
   };
-
-  useEffect(() => {
-    form.resetFields();
-  }, [appliedFilters, form]);
 
   const applyFilters = (values: TOrderFilters) => {
     dispatch(ordersSliceActions.setFilters(values));

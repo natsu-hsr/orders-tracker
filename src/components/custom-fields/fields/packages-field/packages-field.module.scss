@@ -1,0 +1,7 @@
+@use "../../../../shared/styles/mixins.scss" as *;
+
+.wrapper {
+  max-height: 400px;
+  overflow-y: auto;
+  @include form-item-border()
+}

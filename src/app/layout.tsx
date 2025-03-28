@@ -1,10 +1,11 @@
 import "./globals.css";
-import type { Metadata } from "next";
-import { Header } from "@/components/header/header";
+import "antd/dist/reset.css";
+import type {Metadata} from "next";
+import {Inter} from "next/font/google";
+import {Header} from "@/components/header";
+import {StoreProvider} from "@/store/config/store-provider";
 
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin", "cyrillic"] });
+const inter = Inter({subsets: ["latin", "cyrillic"], display: "swap"});
 
 export const metadata: Metadata = {
   title: "PandaParcels | Главная",
@@ -27,10 +28,12 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <div className="body-wrapper">
-          <Header />
-          <main className="main-wrapper">
-            {children}
-          </main>
+          <StoreProvider>
+            <Header />
+            <main className="main-wrapper">
+              {children}
+            </main>
+          </StoreProvider>
         </div>
       </body>
     </html>

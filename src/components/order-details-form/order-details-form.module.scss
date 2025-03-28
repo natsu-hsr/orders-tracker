@@ -1,0 +1,10 @@
+.wrapper {
+  &_view-mode {
+    input:disabled,
+    textarea:disabled {
+      color: #000;
+      background-color: transparent;
+      cursor: default;
+    }
+  }
+}
