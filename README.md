@@ -1,6 +1,6 @@
 # Orders Tracker
 
-![Next.js](https://img.shields.io/badge/Next.js-13+-000000.svg?style=flat&logo=next.js) ![TypeScript](https://img.shields.io/badge/TypeScript-4+-3178C6.svg?style=flat&logo=typescript) ![Ant Design](https://img.shields.io/badge/Ant_Design-5+-0170FE.svg?style=flat&logo=ant-design) ![Redux](https://img.shields.io/badge/Redux-764ABC.svg?style=flat&logo=redux) ![Jest](https://img.shields.io/badge/Jest-Tests-C21325.svg?style=flat&logo=jest)
+![Next.js](https://img.shields.io/badge/Next.js-15+-000000.svg?style=flat&logo=next.js) ![TypeScript](https://img.shields.io/badge/TypeScript-4+-3178C6.svg?style=flat&logo=typescript) ![Ant Design](https://img.shields.io/badge/Ant_Design-5+-0170FE.svg?style=flat&logo=ant-design) ![Redux](https://img.shields.io/badge/Redux-764ABC.svg?style=flat&logo=redux) ![Jest](https://img.shields.io/badge/Jest-Tests-C21325.svg?style=flat&logo=jest)
 
 *supported languages: RU*
 
