@@ -62,39 +62,40 @@
 ```
 root/
 ├── src/
-│   ├── app/                  # Страницы
-│   │   ├── orders/           # Страница списка заказов
-│   │   │   ├── [orderId]/    # Страница для конкретного заказа
+│   ├── app/                    # Страницы
+│   │   ├── orders/             # Страница списка заказов
+│   │   │   ├── [orderId]/      # Страница для конкретного заказа
 │   │   │   │   ├── layout.tsx
 │   │   │   │   ├── page.module.scss
 │   │   │   │   └── page.tsx
 │   │   │   ├── layout.tsx
 │   │   │   ├── page.tsx
 │   │   │   └── page.module.scss
-│   │   ├── globals.css       # Глобальные стили
-│   │   ├── layout.tsx        # Корневой layout
-│   │   └── page.tsx          # Главная страница
-│   ├── assets/               # Статические ресурсы (лого)
-│   ├── components/           # Компоненты
-│   │   ├── custom-fields/    # Кастомные поля
-│   │   │   ├── fields/       # Поля
-│   │   │   ├── technical/    # Технические компоненты
+│   │   ├── globals.css         # Глобальные стили
+│   │   ├── layout.tsx          # Корневой layout
+│   │   ├── page.tsx            # Главная страница
+│   │   └── style-registry.tsx  # Обертка для загрузки стилей antd
+│   ├── assets/                 # Статические ресурсы (лого)
+│   ├── components/             # Компоненты
+│   │   ├── custom-fields/      # Кастомные поля
+│   │   │   ├── fields/         # Поля
+│   │   │   ├── technical/      # Технические компоненты
 │   │   │   ├── custom-fields.types.ts
 │   │   │   └── index.ts
-│   │   ├── custom-table/     # Компонент таблицы
-│   │   ├── filters-form/     # Форма фильтров
-│   │   ├── header/           # Шапки
+│   │   ├── custom-table/       # Компонент таблицы
+│   │   ├── filters-form/       # Форма фильтров
+│   │   ├── header/             # Шапки
 │   │   ├── order-details-form/ # Форма подробностей заказа
-│   │   └── mocks/            # Моки-данные
-│   ├── shared/               # Общие утилиты и стили
-│   │   ├── styles/           # Общие стили
-│   │   │   └── mixins.scss   # SCSS-миксины
-│   ├── store/                # Настройка Redux
-│   │   ├── config/           # Конфигурация Redux
-│   │   └── slices/           # Слайсы Redux (например, orders)
-├── jest.config.js            # Конфигурация Jest
-├── tsconfig.json             # Конфигурация TypeScript
-└── next.config.js            # Конфигурация Next.js
+│   │   └── mocks/              # Моки-данные
+│   ├── shared/                 # Общие утилиты и стили
+│   │   ├── styles/             # Общие стили
+│   │   │   └── mixins.scss     # SCSS-миксины
+│   ├── store/                  # Настройка Redux
+│   │   ├── config/             # Конфигурация Redux
+│   │   └── slices/             # Слайсы Redux (например, orders)
+├── jest.config.js              # Конфигурация Jest
+├── tsconfig.json               # Конфигурация TypeScript
+└── next.config.js              # Конфигурация Next.js
 ```
 
 
