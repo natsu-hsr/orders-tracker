@@ -1,10 +1,11 @@
-import s from "./header.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import {Col, Row} from "antd";
 
 import PandaLogo from "@/assets/panda.svg";
 import {HeaderBurger} from "./header-burger";
+
+import s from "./header.module.scss";
 
 export const Header = () => {
   return (
