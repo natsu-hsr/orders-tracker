@@ -1,10 +1,10 @@
 'use client'
-import { useRouter } from 'next/navigation'
-import { Input } from 'antd'
+import {useRouter} from 'next/navigation'
+import {Input} from 'antd'
 
 import s from './search-order-field.module.scss';
 
-const { Search } = Input
+const {Search} = Input
 
 export const SearchOrderField = () => {
   const router = useRouter()

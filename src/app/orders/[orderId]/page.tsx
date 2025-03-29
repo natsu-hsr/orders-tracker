@@ -16,20 +16,32 @@ export const OrderDetails = () => {
   const {orderId} = useParams();
 
   const [orderDetails, setOrderDetails] = useState<TOrderDetails | undefined>(undefined);
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null); // Для хранения ошибки
 
   // имитация загрузки данных с сервера
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-
-    if (orderId) {
-      setLoading(true);
-      timeoutId = setTimeout(() => {
-        const searchedOrder = findOrderDetailsById({orderId: orderId as string});
-        setOrderDetails(searchedOrder);
-        setLoading(false);
-      }, 3000);
+    if (!orderId) {
+      setError("ID заказа не указан");
+      setLoading(false);
+      return;
     }
+
+    const timeoutId = setTimeout(() => {
+      try {
+        const searchedOrder = findOrderDetailsById({orderId: orderId as string});
+        if (searchedOrder) {
+          setOrderDetails(searchedOrder);
+        } else {
+          setError("Заказ не найден");
+        }
+      } catch (err) {
+        console.error('Ошибка получаения заказа', err);
+        setError("Произошла ошибка при получении деталей заказа");
+      } finally {
+        setLoading(false);
+      }
+    }, 3000);
 
     return () => clearTimeout(timeoutId);
   }, [orderId]);
@@ -69,7 +81,7 @@ export const OrderDetails = () => {
           ) : (
             <Alert
               type="error"
-              description="Произошла ошибка при получении деталей заказа :("
+              description={`Произошла ошибка при получении деталей заказа${error && ` "${error}"`}`}
             />
           )
         }

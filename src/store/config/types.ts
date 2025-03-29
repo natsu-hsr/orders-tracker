@@ -1,7 +1,7 @@
 import {ThunkDispatch} from 'redux-thunk';
-import { AnyAction } from '@reduxjs/toolkit/react';
+import {AnyAction} from '@reduxjs/toolkit/react';
 
-import { ordersSliceName, TOrdersSliceState } from '../slices/orders';
+import {ordersSliceName, TOrdersSliceState} from '../slices/orders';
 
 export type AppState = {
     [ordersSliceName]: TOrdersSliceState;

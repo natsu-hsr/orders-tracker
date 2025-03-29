@@ -2,7 +2,7 @@
 
 import {useState} from "react";
 import Link from "next/link";
-import {usePathname } from "next/navigation";
+import {usePathname} from "next/navigation";
 import {MenuOutlined} from "@ant-design/icons";
 import {Button, Drawer, Menu} from "antd";
 

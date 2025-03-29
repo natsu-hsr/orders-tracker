@@ -1,9 +1,9 @@
-import "./globals.css";
-import "antd/dist/reset.css";
+import "./globals.scss";
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
 import {Header} from "@/components/header";
 import {StoreProvider} from "@/store/config/store-provider";
+import StyleRegistry from "./style-registry";
 
 const inter = Inter({subsets: ["latin", "cyrillic"], display: "swap"});
 
@@ -27,14 +27,16 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={inter.className}>
-        <div className="body-wrapper">
-          <StoreProvider>
+        <StoreProvider>
+          <StyleRegistry>
+          <div className="body-wrapper">
             <Header />
             <main className="main-wrapper">
               {children}
             </main>
-          </StoreProvider>
-        </div>
+          </div>
+          </StyleRegistry>
+        </StoreProvider>
       </body>
     </html>
   );

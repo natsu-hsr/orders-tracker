@@ -1,6 +1,5 @@
 'use client'
 
-// import Row from "antd/es/row";
 import {Row} from 'antd'
 import {TFilters, FiltersForm} from "@/components/filters-form";
 import {CustomTable} from "./custom-table"

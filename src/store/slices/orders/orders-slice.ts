@@ -1,6 +1,6 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { TOrders, TOrderFilters, TOrdersSliceState } from "./orders-slice-types";
-import { ordersSliceName } from "./orders-slice-constants";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {TOrders, TOrderFilters, TOrdersSliceState} from "./orders-slice-types";
+import {ordersSliceName} from "./orders-slice-constants";
 
 export const ordersSlice = createSlice({
   initialState: {

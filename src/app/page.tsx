@@ -6,7 +6,6 @@ import {SearchOrderField} from "@/components/custom-fields/fields/search-order-f
 
 import s from './page.module.scss';
 
-
 export default function Home() {
   return (
     <Row justify="center" align="middle">
