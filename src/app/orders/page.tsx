@@ -15,8 +15,8 @@ export default function Orders() {
     <>
       <Title level={2}>Таблица заказов</Title>
       <CustomTableContainer<TOrder>
-        filters={ordersFilters}
         rowKey="orderId"
+        filters={ordersFilters}
         columns={ordersMockColumns}
         dataSource={ordersData}
       />

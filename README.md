@@ -30,8 +30,8 @@
 
 1. **Клонируйте репозиторий**:
    ```bash
-   git clone https://github.com/<username>/cdek_orders-table_next.git
-   cd cdek_orders-table_next
+   git clone https://github.com/natsu-hsr/orders_tracker_react.git
+   cd orders_tracker_react
 
 2. **Установите зависимости**:
    ```bash 
